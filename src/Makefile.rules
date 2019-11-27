@@ -529,7 +529,7 @@ $(MW_DIR_BIN) $(MW_DIR_LIB):
 # also removes the .o file so that the rule will be run again next
 # time the user runs make.
 define MW_RULE_DEPEND_C
-	$(HOSTCC) -MM $(MAKEDEPCFLAGS) $(DEFINES) $< \
+	$(CC) -MM $(MAKEDEPCFLAGS) $(DEFINES) $< \
 		| sed 's/.*\.o[ :]*/$(subst /,\/,$@) : /g' \
 		> $(basename $@).d \
 		|| (rm $@ $(basename $@).d ; exit 1)
