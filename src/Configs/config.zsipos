@@ -16,14 +16,11 @@
 #
 ####################################################################
 ARCH                     = LINUX-RISCV
-BIGENDIAN                = N
 RISCVTOOLSPREFIX         = $(ZTC_PREFIX)-
 SHAREDLIBS               = N
 SHAREDLINK               = N
-#EXTRAFLAGS               = -Wall -Wno-missing-prototypes
 DEBUG                    = N
 OPTIMIZE                 = Y
-#OPTIMIZE                 = -O1
 VERBOSE                  = N
 THREADSAFE               = N
 PARALLEL                 = N
@@ -34,10 +31,10 @@ PARALLEL                 = N
 # Screen size/depth for X11, FBE and non-dynamic framebuffer systems
 ####################################################################
 SCREEN                   = FB
-MOUSE                    = DEVMICEMOUSE
-KEYBOARD                 = SCANKBD
-SCREEN_WIDTH             = 1024
-SCREEN_HEIGHT            = 768
+MOUSE                    = TSLIBMOUSE
+KEYBOARD                 = NOKBD
+SCREEN_WIDTH             = 480
+SCREEN_HEIGHT            = 320
 #X11LIBLOCATION           = /usr/X11/lib
 #X11HDRLOCATION           = /usr/X11/include
 
@@ -46,10 +43,10 @@ SCREEN_HEIGHT            = 768
 # Libraries to build: microwin, nano-X, nxlib, engine
 #
 ####################################################################
-MICROWIN                 = Y
+MICROWIN                 = N
 NANOX                    = Y
-NUKLEARUI                = Y
-NX11                     = N
+NUKLEARUI                = N
+NX11                     = Y
 ENGINE                   = N
 TINYWIDGETS              = N
 
@@ -59,7 +56,7 @@ TINYWIDGETS              = N
 #
 ####################################################################
 FBEMULATOR               = N
-MICROWINDEMO             = Y
+MICROWINDEMO             = N
 MICROWINMULTIAPP         = N
 NANOXDEMO                = Y
 HAVE_VNCSERVER_SUPPORT   = N
@@ -75,7 +72,7 @@ INCVNC                   =
 # NANOWM links the window manager into the server.
 ####################################################################
 LINK_APP_INTO_SERVER     = Y
-NANOWM                   = Y
+NANOWM                   = N
 
 ####################################################################
 # Shared memory support for Nano-X client/server protocol speedup
@@ -200,10 +197,10 @@ NOCLIPPING               = N
 # set GRAYPALETTE to link with Gray Palette (valid only for 4bpp modes)
 # set HAVETEXTMODE=Y for systems that can switch between text & graphics.
 USE_EXPOSURE             = Y
-VTSWITCH                 = Y
+VTSWITCH                 = N
 FBREVERSE                = N
 GRAYPALETTE              = N
-HAVETEXTMODE             = Y
+HAVETEXTMODE             = N
 
 ####################################################################
 # Screen pixel format
@@ -231,12 +228,12 @@ HAVETEXTMODE             = Y
 #SCREEN_PIXTYPE           = MWPF_TRUECOLORARGB
 #SCREEN_PIXTYPE           = MWPF_TRUECOLORABGR
 SCREEN_PIXTYPE           = MWPF_TRUECOLOR565
-SCREEN_DEPTH             = 8
+#SCREEN_DEPTH             = 8
 
 ####################################################################
 # Screen drivers
 # SCREEN=X11		X11
-SCREEN=FB			linux framebuffer
+# SCREEN=FB		linux framebuffer
 # SCREEN=FBE		framebuffer emulator
 # SCREEN=SDL		SDL v2
 # SCREEN=ALLEGRO	Allegro v5
@@ -247,13 +244,13 @@ SCREEN=FB			linux framebuffer
 # MOUSE=NOMOUSE		no mouse driver
 # MOUSE=GPMMOUSE	gpm mouse
 # MOUSE=SERMOUSE	serial Microsoft, PC, Logitech, PS/2 mice (/dev/psaux)
-# MOUSE=DEVMICEMOUSE Use Linux /dev/input/mice driver
-MOUSE=TSLIBMOUSE	Use tslib (/dev/input/event0)
+# MOUSE=DEVMICEMOUSE    Use Linux /dev/input/mice driver
+# MOUSE=TSLIBMOUSE	Use tslib (/dev/input/event0)
 ####################################################################
 
 ####################################################################
 # Keyboard drivers
-KEYBOARD=NOKBD		no keyboard driver
+# KEYBOARD=NOKBD		no keyboard driver
 # KEYBOARD=TTYKBD		tty keyboard
 # KEYBOARD=SCANKBD		scanmode keyboard
 # KEYBOARD=2NDKBD		two keyboards support
