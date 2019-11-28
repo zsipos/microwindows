@@ -15,13 +15,13 @@
 # Target platform and compilation options
 #
 ####################################################################
-ARCH                     = LINUX-RISCV
+ARCH                     = LINUX-ZSIPOS
 RISCVTOOLSPREFIX         = $(ZTC_PREFIX)-
 SHAREDLIBS               = N
 SHAREDLINK               = N
 DEBUG                    = N
 OPTIMIZE                 = Y
-VERBOSE                  = N
+VERBOSE                  = Y
 THREADSAFE               = N
 PARALLEL                 = N
 
