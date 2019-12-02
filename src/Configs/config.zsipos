@@ -22,7 +22,7 @@ SHAREDLINK               = N
 DEBUG                    = N
 OPTIMIZE                 = Y
 VERBOSE                  = Y
-THREADSAFE               = N
+THREADSAFE               = Y
 PARALLEL                 = N
 
 ####################################################################
@@ -47,7 +47,7 @@ MICROWIN                 = N
 NANOX                    = Y
 NUKLEARUI                = N
 NX11                     = Y
-ENGINE                   = N
+ENGINE                   = Y
 TINYWIDGETS              = N
 
 ####################################################################
