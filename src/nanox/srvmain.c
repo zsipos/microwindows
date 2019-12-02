@@ -268,7 +268,7 @@ GrOpen(void)
 #if NANOWM
 	wm_init();	/* init built-in window manager*/
 #endif
-    return 1;
+    return mouse_fd;
 }
 
 /*
