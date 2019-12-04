@@ -76,6 +76,7 @@ TARGETS += \
 
 # tools
 TARGETS += \
+	$(MW_DIR_BIN)/nxdisplay \
 	$(MW_DIR_BIN)/nxmag \
 	$(MW_DIR_BIN)/nxclock \
 	$(MW_DIR_BIN)/nxview \
