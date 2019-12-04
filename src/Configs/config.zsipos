@@ -21,7 +21,7 @@ SHAREDLIBS               = N
 SHAREDLINK               = N
 DEBUG                    = N
 OPTIMIZE                 = Y
-VERBOSE                  = Y
+VERBOSE                  = N
 THREADSAFE               = Y
 PARALLEL                 = N
 

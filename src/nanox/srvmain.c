@@ -939,6 +939,7 @@ GsInitialize(void)
 		EPRINTF("Cannot allocate root window\n");
 		return -1;
 	}
+	memset(wp, 0, sizeof(GR_WINDOW));
 
 #if HAVE_SIGNAL
 	/* catch terminate signal to restore tty state*/
