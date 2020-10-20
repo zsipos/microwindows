@@ -21,7 +21,7 @@
 #include <pthread.h>
 typedef pthread_mutex_t	MWMUTEX;
 
-#if ! (defined(__CYGWIN__) | RTEMS | MACOSX)
+#if !(defined(__CYGWIN__) | RTEMS | MACOSX) && defined(PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP)
 /*
  * This definition doesn't require explicit initialization and -lpthread
  *
